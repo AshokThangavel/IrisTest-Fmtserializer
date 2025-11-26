@@ -1,0 +1,6 @@
+    zn "%SYS"
+    do ##class(Security.Users).UnExpireUserPasswords("*")
+    zpm "install passwordless"
+    zn "USER"
+    zpm "load /home/irisowner/dev/ -v":1
+    halt

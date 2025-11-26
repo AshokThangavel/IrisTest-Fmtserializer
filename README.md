@@ -38,10 +38,9 @@ docker-compose down
 
 ```objectscript
 // Generate JSON for UnitTestId 37, filtered by status "failed"
-Set jsonResult = ##class(IrisTest.Format.Writer).GenerateJSON(37, "failed")
+Set jsonResult = ##class(IrisTest.Format.Serializer).GenerateJSON(37, "failed")
 Write jsonResult ; returns %DAO object
 
 // Generate YAML for UnitTestId 37
-Set yamlResult = ##class(IrisTest.Format.Writer).GenerateYAML(37, "all")
+Set yamlResult = ##class(IrisTest.Format.Serializer).GenerateYAML(37, "all")
 Write yamlResult ; returns stream object
-
